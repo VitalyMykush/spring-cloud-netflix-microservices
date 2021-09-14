@@ -7,10 +7,14 @@ spring:
   cloud:
     config:
       server:
-#        native:
-#          searchLocations: classpath:/configs/{application}
+        native:
+          searchLocations: classpath:/configs/{application}
         git:
-          uri: https://VitalyMykush/spring-cloud-netflix-microservices/config-repo
+          uri: https://github.com/VitalyMykush/spring-cloud-netflix-microservices/
           clone-on-start: true
+          default-label: main
+          search-paths: "config-repo/{application}"
           name: VitalyMykush
           password: 20102А20102а
+          skipSslValidation: true
+
