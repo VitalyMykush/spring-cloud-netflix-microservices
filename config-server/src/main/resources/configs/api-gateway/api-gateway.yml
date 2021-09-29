@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+zuul:
+  ignoredServices: "*"
+  routes:
+    reviews:
+      path: /reviews/**
+      url: http://localhost:8081/reviews-api/reviews/

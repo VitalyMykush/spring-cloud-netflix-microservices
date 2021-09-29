@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: users-api
-  profiles:
-    active: development
-  config:
-    import: "configserver:"

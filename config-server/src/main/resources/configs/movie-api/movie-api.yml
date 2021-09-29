@@ -2,3 +2,13 @@ server:
   port: 8082
   servlet:
     context-path: /movie-api
+
+eureka:
+  client:
+    health-check: true
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
